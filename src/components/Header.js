@@ -1,24 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 const Header = () => {
   return (
-  <header>
-    <nav>
-        <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/listado">Listado</Link>
-            </li>
-            <li>    
-                <Link to="#">Contacto</Link>
-            </li>
-        </ul>
-
-    </nav>
-
-    </header>
+<nav className="navbar navbar-expand-lg bg-danger">
+<div>
+    header
+</div>
+</nav>
 
   )
 }
