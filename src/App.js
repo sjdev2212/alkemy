@@ -8,6 +8,7 @@ import {
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Detalle from './components/Detalle'
+import Resultados from './components/Resultados'
 
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
       <Route exact path="/" element={<Login />} />
       <Route path="listado" element={<Listado />} />
       <Route path="detalle/:id" element={<Detalle />} />
-     
-    </Routes>
+      <Route path="resultados/:id" element={<Resultados />} />
+     </Routes>
     <Footer/>
       </BrowserRouter>
 
