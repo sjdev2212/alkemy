@@ -5,7 +5,7 @@ const Header = () => {
   return (
 <nav className="navbar navbar-expand-lg bg-success">
   <div className="container-fluid">
-    <a className="navbar-brand" >Navbar</a>
+    <Link className="navbar-brand" to='/' >Navbar</Link>
    
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">

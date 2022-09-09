@@ -19,7 +19,7 @@ useEffect (() => {
     setDetalle(res.data)
   } )
 
-},[navigate,setDetalle] )
+},[navigate,setDetalle,apiEndpoint] )
 
 
 
@@ -33,9 +33,7 @@ useEffect (() => {
         <div className='col-8'>
         <p>{detalle.overview}</p>
         </div>
-        <div>
-          <a>Homepage.. {detalle.homepage}</a>
-        </div>
+      
     </div>
     </>
   )
