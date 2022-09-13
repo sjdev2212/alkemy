@@ -9,29 +9,37 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Detalle from './components/Detalle'
 import Resultados from './components/Resultados'
+import {useState, useEffect} from "react"
+import Favoritos from './components/Favoritos';
 
 
 function App() {
-   localStorage.getItem('favoritos')
-  const addToFav = (e) => {
-    e.preventDefault()
-   const btn = e.currentTarget
- const div = btn.parentElement
-  const image = div.querySelector('img').getAttribute('src')
-  const title = div.querySelector('h5').innerText
-  const description = div.querySelector('p').innerText
- const idMovie = btn.getAttribute('movieId')
- 
+  const [fav, setFav] = useState([]);
 
- const movieInfo = {
-    image,title,description,idMovie}
-    let temporalFavs = []
-// if (temporalFavs.length === 0) {
-//   btn.setAttribute('class', 'btn-fav-not')
-// }
-temporalFavs.push(movieInfo)
-localStorage.setItem('favoritos', JSON.stringify(temporalFavs))
+
+  const addToFav = (e) => {
+    const btn = e.currentTarget
+    const div = btn.parentElement
+    const image = div.querySelector('img').getAttribute('src')
+    const title = div.querySelector('h5').innerText
+    const description = div.querySelector('p').innerText
+    const idMovie = btn.getAttribute('movieId')
+    const movieInfo = {
+      image,title,description,idMovie}
+      setFav([...fav, movieInfo])
+      console.log(fav)
+      localStorage.setItem('fav', JSON.stringify(fav))
+      
+
     }
+
+useEffect (() => {
+  const favStorage = localStorage.getItem('fav')
+  if (favStorage) {
+    setFav(JSON.parse(favStorage))
+  }
+
+}, [])
   
 
   return (
@@ -42,6 +50,7 @@ localStorage.setItem('favoritos', JSON.stringify(temporalFavs))
       <Route path="listado" element={<Listado addToFav={addToFav} />} />
       <Route path="detalle/:id" element={<Detalle />} />
       <Route path="resultados/:id" element={<Resultados />} />
+      <Route path="favoritos" element={<Favoritos />} />
      </Routes>
     <Footer/>
       </BrowserRouter>
