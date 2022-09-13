@@ -15,8 +15,6 @@ import Favoritos from './components/Favoritos';
 
 function App() {
   const [fav, setFav] = useState([]);
-
-
   const addToFav = (e) => {
     const btn = e.currentTarget
     const div = btn.parentElement
@@ -26,8 +24,10 @@ function App() {
     const idMovie = btn.getAttribute('movieId')
     const movieInfo = {
       image,title,description,idMovie}
+      if (fav.find(movie => movie.idMovie === idMovie)) {
+        return
+      }
       setFav([...fav, movieInfo])
-      console.log(fav)
       localStorage.setItem('fav', JSON.stringify(fav))
       
 
