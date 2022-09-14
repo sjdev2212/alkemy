@@ -38,11 +38,11 @@ const Favoritos = () => {
                 <p>No favorites added</p>
             </div>) : (
                 fav.map((movie) => (
-                    <div className="col-12 col-md-6 col-lg-4" key={movie.id}>
+                    <div className="col-10 col-md-6 col-lg-4" key={movie.id}>
                         <div className="card">
                             <img src={movie.image} className="card-img-top" alt="poster" />
                             <div className="card-body">
-                                <h5 className="card-title">{movie.title}</h5>
+                                <h5 className="card-title title">{movie.title}</h5>
                                 <p className="card-text">{movie.description}</p>
                                 <Link to={`/detalle/${movie.idMovie}`} className="btn btn-primary">Detalle</Link>
                                 <IoIosTrash className='trasher' movieId={movie.idMovie} onClick={removeFav} />

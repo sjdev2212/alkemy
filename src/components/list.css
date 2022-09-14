@@ -36,3 +36,8 @@
   width: 55px;
   height: 55px;
 }
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(15, 15, 190);
+}

@@ -44,13 +44,16 @@ const Login = () => {
     }
     }
   return (
-    <div>
+    <>
+      <div className="container mt-5">
+      <h1 style={{display:"flex" ,justifyContent:"center"}}>Movies</h1>
   <form onSubmit={submitHandler} >
    <input type="email" placeholder="email" name="email"/>
     <input type="password" placeholder="password"  name="password"/>
     <button  type="submit" >Ingresar</button>
     </form>
     </div>
+    </>
 
 
   )
