@@ -15,7 +15,7 @@ useEffect (() => {
     navigate("/")
   }
   axios.get(apiEndpoint).then(res => {
-    console.log(res.data)
+  
     setDetalle(res.data)
   } )
 

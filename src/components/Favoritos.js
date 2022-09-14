@@ -5,13 +5,30 @@ import './listado.css'
 
 
 const Favoritos = () => {
-    const [fav, setFav] = useState([])
+ const [fav, setFav] = useState([])
     useEffect(() => {
         const favStorage = localStorage.getItem('fav')
-        if (favStorage) {
-            setFav(JSON.parse(favStorage))
+        const fav = JSON.parse(favStorage)
+        if (fav) {
+            setFav(fav)
         }
+       
     }, [])
+    
+    const removeFav = (e) => {
+        
+        const favStorage = localStorage.getItem('fav')
+        const fav = JSON.parse(favStorage)
+        console.log(fav)
+        const btn = e.currentTarget
+        const idMovie = btn.getAttribute('movieId')
+        console.log(idMovie)
+        const newFav = fav.filter(movie => movie.idMovie !== idMovie)
+        localStorage.setItem('fav', JSON.stringify(newFav)) 
+        setFav(newFav)
+
+
+    }
   return (
 <>
     <div className="container">
@@ -22,14 +39,13 @@ const Favoritos = () => {
             </div>) : (
                 fav.map((movie) => (
                     <div className="col-12 col-md-6 col-lg-4" key={movie.id}>
-                        {console.log(movie.idMovie)}
                         <div className="card">
-                            <img src={movie.image} className="card-img-top" alt="..." />
+                            <img src={movie.image} className="card-img-top" alt="poster" />
                             <div className="card-body">
                                 <h5 className="card-title">{movie.title}</h5>
                                 <p className="card-text">{movie.description}</p>
                                 <Link to={`/detalle/${movie.idMovie}`} className="btn btn-primary">Detalle</Link>
-                                <IoIosTrash className='trasher' />
+                                <IoIosTrash className='trasher' movieId={movie.idMovie} onClick={removeFav} />
 
                             </div>
                         </div>

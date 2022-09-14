@@ -30,4 +30,6 @@ justify-self:  center;
 }
 .trasher:hover{
     color: red;
+    width: 55px;
+    height: 55px;
 }

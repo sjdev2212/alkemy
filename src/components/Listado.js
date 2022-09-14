@@ -33,7 +33,7 @@ return(
               <img src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`} className="card-img-top" alt="..." />
               <button  onClick={addToFav}
               type="submit"
-              movieId={pelicula.id}
+              movieid={pelicula.id}
                 className="btn-fav"><BsFillEmojiHeartEyesFill className="icon"/></button>
             <div className="card-body">
           <h5 className="card-title">{pelicula.title}</h5>

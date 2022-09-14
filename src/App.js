@@ -21,7 +21,7 @@ function App() {
     const image = div.querySelector('img').getAttribute('src')
     const title = div.querySelector('h5').innerText
     const description = div.querySelector('p').innerText
-    const idMovie = btn.getAttribute('movieId')
+    const idMovie = btn.getAttribute('movieid')
     const movieInfo = {
       image,title,description,idMovie}
       if (fav.find(movie => movie.idMovie === idMovie)) {
