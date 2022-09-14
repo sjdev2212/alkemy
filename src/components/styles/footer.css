@@ -1,12 +1,12 @@
-.footer{
-    background-color: #000;
-    color: rgb(70, 175, 37);
-    padding: 20px;
-    text-align: center;
-    height: 50px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
-    overflow: hidden;
+.footer {
+  background-color: #000;
+  color: rgb(70, 175, 37);
+  padding: 20px;
+  text-align: center;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
 }

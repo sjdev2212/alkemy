@@ -31,11 +31,11 @@ const Favoritos = () => {
     }
   return (
 <>
-    <div className="container">
+<div className="container mt-3">
       
         <div className="row">
-            {fav.length ===  0 ? ( <div className="col-12">
-                <p>No hay favoritos</p>
+            {fav.length ===  0 ? ( <div className="col-12 mt-5">
+                <p>No favorites added</p>
             </div>) : (
                 fav.map((movie) => (
                     <div className="col-12 col-md-6 col-lg-4" key={movie.id}>
