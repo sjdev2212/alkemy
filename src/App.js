@@ -1,5 +1,5 @@
 import Login from './components/Login'
-import Listado from './components/Listado'
+import Listado from './components/List'
 import {
   BrowserRouter,
   Routes,
@@ -7,10 +7,10 @@ import {
 } from "react-router-dom";
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Detalle from './components/Detalle'
-import Resultados from './components/Resultados'
+import Detalle from './components/Details'
+import Resultados from './components/Results'
 import {useState, useEffect} from "react"
-import Favoritos from './components/Favoritos';
+import Favoritos from './components/Favorites';
 
 
 function App() {
