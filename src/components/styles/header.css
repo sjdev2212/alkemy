@@ -1,0 +1,30 @@
+.header{
+    background-color: rgb(13, 13, 14);
+     position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: azure;
+    height: 50px;
+}
+.header-ul{
+
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    width: 78%;
+    
+}
+.header-li{
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(194, 255, 124);
+    font-size: 18px;
+}
