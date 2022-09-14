@@ -1,7 +1,7 @@
 import { useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 import { IoIosTrash } from "react-icons/io";
-import './listado.css'
+import './list.css'
 
 
 const Favoritos = () => {
