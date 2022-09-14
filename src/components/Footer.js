@@ -1,13 +1,14 @@
 import React from 'react'
+import './styles/footer.css'
 
 const Footer = () => {
   return (
 
-    <nav className="footer bg-transparent border-success">
-<div>
-   Footer
-</div>
-</nav>
+  <nav className='footer'>
+    <div>
+      Footer
+    </div>
+  </nav>
   )
 }
 
