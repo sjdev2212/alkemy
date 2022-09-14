@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import swal from '@sweetalert/with-react';
 import { BsFillEmojiHeartEyesFill } from "react-icons/bs";
 import axios from "axios";
-import './listado.css'
+import './list.css'
 
 const Listado = ({addToFav}) => {
   const navigate = useNavigate();
