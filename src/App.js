@@ -1,4 +1,4 @@
-import Login from './components/Login'
+
 import Listado from './components/List'
 import {
   BrowserRouter,
@@ -11,6 +11,7 @@ import Detalle from './components/Details'
 import Resultados from './components/Results'
 import {useState, useEffect} from "react"
 import Favoritos from './components/Favorites';
+import Signup from './components/Signup';
 
 
 function App() {
@@ -46,7 +47,7 @@ useEffect (() => {
     <BrowserRouter>
     <Header/>
       <Routes>
-      <Route exact path="/" element={<Login />} />
+      <Route exact path="/signup" element={<Signup />} />
       <Route path="listado" element={<Listado addToFav={addToFav} />} />
       <Route path="detalle/:id" element={<Detalle />} />
       <Route path="resultados/:id" element={<Resultados />} />
